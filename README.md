@@ -13,8 +13,8 @@ columns on which they are to be joined. `index_cols` will accept an Index, such 
 `delta(df1, df2, df1.columns[:4])`, in addition to a list or single column name.
 
 ```
-full, add, change, delete = delta_robust(df1, df2, index_cols, **kwargs)
+full, add, change, delete = delta_robust2(df1, df2, index_cols, **kwargs)
 ```
 
 Wrapper around `delta()` that codes and decodes the values in index_cols to avoid
-hash collisions with large data sets.
+hash collisions with large data sets. Before pandas v0.21 use `delta_robust`.
